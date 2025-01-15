@@ -1,0 +1,68 @@
+Deep learning Project
+text based comments and the associated labels as to whether or not they are toxic
+basically supervised learning problem 
+
+Comments are strings basically ---> Inputs 
+
+different readings of toxic, moderately toxic, severely toxic, racist, etc 
+
+labels are multi binary 
+
+comments ---> associated binary labels which are the outcomes
+
+
+1st step ---> Tokenization 
+Take the comments and convert them into tokens
+Converting the words into sequence of integers 
+
+2nd step ---> Embedding 
+"Particular traits/attributes"
+
+Taken the word - tokenized it - converted it into an embedding and then pass it to a deep neural network
+
+LSTM Layers 
+
+
+H5 allows us to save our trained deep neural network to out hard disk
+
+
+
+Steps -
+1. Install Dependencies and bring in data 
+2. Preprocess
+3. Create sequential model
+4. Make Predictions 
+5. Evaluate Model 
+5. Test and Gradio app 
+
+
+Multi-output model 
+
+Pandas helps us work with tabular files, especially CSV 
+
+We use the text vectorization layer to tokenize the text 
+ 
+Why is text vectorization layer used :
+A preprocessing layer which maps text features to integer sequences.
+Basically we take a word and convert it into a code
+
+vectorizer.adapt : it is going to learn all of the word that are inside of our vocabulary, inside of our sentences
+
+
+2. Creating Sequential model
+- first layer is the embedding layer. Embedding that maps to a word knows a lot about that word
+- In our project, it may learn what words are positive/negative and whether or not something might be subjective 
+- "Personality test" for the word, it tells us all about the word that makesit useful for deep learning 
+ 
+
+Bidirectional - Allows for the information to be passed both backwards and forward in the LSTM layer 
+When we are inputting different words, we have the sequence outputting information in one direction 
+But bidirectional allows us to pass words in both directions, this is particularly useful for sentences because words prior to a current word will still have meaning and might even get modify a meaning 
+eg - I dont hate you. if the model looks at the word 'hate' it wont take into account the word before or after it and we need it to. 
+Bidirectional is particularly useful for NLP tasks especially with sentences
+
+
+Sigmoid layer will basically transform whatever output we get from a particular layer into a value between 0 and 1
+
+Activation acts like a modifier and and it allows us to take non-linearities into account when building deep neural network
+Output between 0 and 1 is basically what we want for our labels 
