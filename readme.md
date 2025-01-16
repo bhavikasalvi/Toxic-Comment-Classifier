@@ -5,7 +5,6 @@ This project classifies text-based comments into categories like toxic, moderate
 ## Workflow
 
 ### 1. Install Dependencies and Load Data
-- Use Pandas for data manipulation.
 
 ### 2. Preprocessing
 - **Tokenization:** Convert comments to integer sequences using a text vectorization layer.
